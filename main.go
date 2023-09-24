@@ -2,7 +2,6 @@ package main
 
 import (
 	"net/http"
-	"F:\assignments\go-todo\routers\todoRouter.go"
 	"github.com/gorilla/mux"
 )
 
