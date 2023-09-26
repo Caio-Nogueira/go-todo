@@ -1,0 +1,22 @@
+INSERT INTO Todo (title, description, status)
+VALUES 
+  ('Meeting with Client', 'Discuss project requirements and timelines with ABC Corp.', 0),
+  ('Write Monthly Report', 'Summarize key metrics and accomplishments for the month of September.', 1),
+  ('Prepare Presentation', 'Create slides for the upcoming team meeting on project updates.', 0),
+  ('Code Review', 'Review and provide feedback on PR #123 for bug fixes in the login module.', 1),
+  ('Design Mockups for Homepage', 'Create wireframes and mockups for the redesign of the homepage.', 0),
+  ('Research New Framework', 'Explore and evaluate the suitability of the XYZ framework for our project.', 1),
+  ('Test User Authentication', 'Write test cases and perform testing on user authentication functionality.', 0),
+  ('Update Documentation', 'Add new features and their usage instructions to the project documentation.', 1),
+  ('Set Up Development Environment', 'Install required dependencies and configure development environment.', 0),
+  ('Create User Onboarding Flow', 'Design a seamless onboarding process for new users.', 1),
+  ('Review Marketing Campaign', 'Analyze the effectiveness of the latest marketing campaign and suggest improvements.', 0),
+  ('Refactor Database Schema', 'Optimize the database schema for better performance.', 1),
+  ('Plan Team Building Event', 'Organize a team-building event for the end of the quarter.', 0),
+  ('Write Unit Tests', 'Write unit tests for the core functionality of the application.', 1),
+  ('Create Social Media Content', 'Design engaging content for our social media channels.', 0),
+  ('Conduct User Interviews', 'Gather feedback from users to improve the usability of the application.', 1),
+  ('Optimize Page Load Speed', 'Identify and implement optimizations to improve page load times.', 0),
+  ('Translate UI Texts', 'Translate user interface texts into Spanish for the upcoming release.', 1),
+  ('Set Up Continuous Integration', 'Configure CI pipeline for automated testing and deployment.', 0),
+  ('Write API Documentation', 'Document the API endpoints and request/response formats.', 1);
