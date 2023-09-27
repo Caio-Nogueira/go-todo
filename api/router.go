@@ -1,6 +1,5 @@
 package api
 
-
 import (
 	"github.com/gorilla/mux"
 	"github.com/Caio-Nogueira/go-todo/api/todos"
