@@ -13,5 +13,4 @@ func main() {
 	apiRouter := router.PathPrefix("/api").Subrouter()
 	api.TodoRouter(apiRouter)
 	http.ListenAndServe(":8080", router)
-
 }
