@@ -1,5 +1,5 @@
-# Project Name
-This is a Go project that does X, Y, and Z.
+Go TO-DO List tracking application
+This is a simple Go API that consumes a PostgreSql database
 
 ## Getting Started
 To get started with this project, you'll need to do the following:
