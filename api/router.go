@@ -9,6 +9,7 @@ import (
 
 func TodoRouter(router *mux.Router) {
 	router.HandleFunc("/todos", middlewares.AuthMiddleware(todos.GetAllTodosHandler)).Methods("GET")
+	router.HandleFunc("/todos", middlewares.AuthMiddleware(todos.CreateTodoHandler)).Methods("POST")
 	router.HandleFunc("/login", auth.LoginHandler).Methods("POST")
 }
 

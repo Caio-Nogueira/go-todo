@@ -10,14 +10,13 @@ import (
 var SecretKey = []byte(os.Getenv("SECRET_KEY"))
 
 var Claims struct {
-	Username string `json:"username"`
+	ID string `json:"id"`
 	jwt.StandardClaims
 }
 
-func GenerateJWT(username string) (string, error) {
-	Claims.Username = username
+func GenerateJWT(ID string) (string, error) {
+	Claims.ID = ID
 	token := jwt.NewWithClaims(jwt.SigningMethodHS256, Claims)
 	fmt.Println(Claims)
 	return token.SignedString(SecretKey)
-
 }

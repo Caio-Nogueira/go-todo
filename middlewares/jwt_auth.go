@@ -38,8 +38,8 @@ func AuthMiddleware(next http.HandlerFunc) http.HandlerFunc {
 
 		// Add the user ID to the request context
 		
-		username := claims.Username
-		ctx := context.WithValue(r.Context(), "username", username)
+		user_id := claims.ID
+		ctx := context.WithValue(r.Context(), "ID", user_id)
 		next(w, r.WithContext(ctx))
 	})
 }

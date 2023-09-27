@@ -14,6 +14,11 @@ type Todo struct {
 	UpdatedAt 			time.Time `json:"updated_at"`
 }
 
+type CreateTodo struct {
+	Title  				string `json:"title"`
+	Description 		string `json:"description"`
+}
+
 func (Todo) TableName() string {
     return "todo"
 }
