@@ -1,10 +1,23 @@
 DROP TABLE IF EXISTS "todo";
+DROP TABLE IF EXISTS "users";
 
 CREATE EXTENSION IF NOT EXISTS "uuid-ossp";
 
+CREATE TABLE Users (
+    id UUID PRIMARY KEY DEFAULT uuid_generate_v4(),
+    username VARCHAR(255) NOT NULL,
+    password VARCHAR(255) NOT NULL,
+    email VARCHAR(255) NOT NULL,
+    updated_at TIMESTAMP DEFAULT NOW(),
+    created_at TIMESTAMP NOT NULL DEFAULT NOW()
+);
+
 CREATE TABLE Todo (
-        id UUID PRIMARY KEY DEFAULT uuid_generate_v4(),
-        title VARCHAR(255) NOT NULL,
-        description TEXT NOT NULL,
-        status INTEGER NOT NULL DEFAULT 0
-    );
+    ID UUID PRIMARY KEY DEFAULT uuid_generate_v4(),
+    title VARCHAR(255) NOT NULL,
+    description TEXT NOT NULL,
+    status INTEGER NOT NULL DEFAULT 0,
+    user_id UUID NOT NULL REFERENCES Users(ID) ON DELETE CASCADE,
+    created_at TIMESTAMP NOT NULL DEFAULT NOW(),
+    updated_at TIMESTAMP DEFAULT NOW()
+);
